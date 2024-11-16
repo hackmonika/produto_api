@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  # PUT /products/:id
+  # PATCH /products/:id
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
@@ -44,4 +44,3 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name, :price, :stock_quantity, :description)
   end
 end
-
